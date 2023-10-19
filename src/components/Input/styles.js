@@ -1,21 +1,27 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  margin: 0.3rem auto;
   display: flex;
+  width: 55%;
+
+  margin: 0.3rem auto;
   align-items: center;
+
+  border-radius: 1rem;
+  background-color: ${({ theme }) => theme.COLORS.GRAY_50};
   > svg {
-    margin-right: -1.8rem;
+    margin-left: 1.5rem;
+    margin-right: -1.5rem;
     position: relative;
     color: ${({ theme }) => theme.COLORS.GRAY_200};
   }
 
   > input {
-    background-color: ${({ theme }) => theme.COLORS.GRAY_50};
-    padding: 1rem 2.2rem;
+    padding: 1rem 2.5rem;
+    width: 100%;
+    background: transparent;
 
     width: 20rem;
-    border-radius: 1rem;
     border: 0;
   }
 `;

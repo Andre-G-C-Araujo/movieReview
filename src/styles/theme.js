@@ -1,7 +1,7 @@
 export default {
   COLORS: {
-    BG100: "red",
-    BG200: "#800060",
+    BG100: "purple",
+    BG200: "#663046",
     BG300: "#600080",
 
     TEXT_COLOR: "#E66C2C",

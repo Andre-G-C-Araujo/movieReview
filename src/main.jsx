@@ -5,6 +5,7 @@ import GlobalStyle from "./styles/global";
 import { ThemeProvider } from "styled-components";
 
 import { Home } from "./Pages/Home";
+
 import theme from "./styles/theme";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
