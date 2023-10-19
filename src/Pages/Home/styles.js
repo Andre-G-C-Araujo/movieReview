@@ -64,12 +64,12 @@ export const Newnote = styled.a`
   grid-area: newnote;
   display: flex;
 
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   justify-content: center;
   align-items: center;
 
   background: ${({ theme }) => theme.COLORS.BG200};
-  color: ${({ theme }) => theme.COLORS.TEXT_COLOR};
+  color: ${({ theme }) => theme.COLORS.BG100};
 
   > .plusButton {
     margin-left: 0.7rem;
