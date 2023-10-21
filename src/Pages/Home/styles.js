@@ -64,7 +64,7 @@ export const Newnote = styled.a`
   grid-area: newnote;
   display: flex;
 
-  font-size: 2.2rem;
+  font-size: 2rem;
   justify-content: center;
   align-items: center;
 
@@ -72,6 +72,6 @@ export const Newnote = styled.a`
   color: ${({ theme }) => theme.COLORS.BG100};
 
   > .plusButton {
-    margin-left: 0.7rem;
+    margin-right: 0.7rem;
   }
 `;

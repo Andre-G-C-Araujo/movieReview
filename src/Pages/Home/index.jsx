@@ -68,8 +68,8 @@ export const Home = () => {
         </Section>
       </Content>
       <Newnote>
-        New Note
         <FiPlus size={30} className="plusButton" />
+        Criar nota
       </Newnote>
     </Container>
   );
