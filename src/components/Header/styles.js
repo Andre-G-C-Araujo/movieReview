@@ -40,6 +40,7 @@ export const Profile = styled.a`
 export const Logout = styled.button`
   background: none;
   border: none;
+  padding: 2rem 2rem 0 0;
 
   color: ${({ theme }) => theme.COLORS.GRAY_300};
   font-size: 2.5rem;
