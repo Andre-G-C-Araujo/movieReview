@@ -8,6 +8,7 @@ export const Container = styled.section`
   color: ${({ theme }) => theme.COLORS.GRAY_100};
   > h2 {
     font-size: 1.6rem;
+    padding-bottom: 0.5rem;
     font-weight: 400;
     border-bottom: 0.1rem;
     border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_200};

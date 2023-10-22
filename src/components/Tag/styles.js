@@ -11,6 +11,6 @@ export const Container = styled.span`
   border-radius: 0.5rem;
 
   font-size: 1.1rem;
-  background-color: ${({ theme }) => theme.COLORS.BG300};
+  background-color: ${({ theme }) => theme.COLORS.BG100};
   color: ${({ theme }) => theme.COLORS.WHITE};
 `;

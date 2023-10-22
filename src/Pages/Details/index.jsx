@@ -6,7 +6,7 @@ import { Section } from "../../components/Section";
 import { ButtonText } from "../../components/ButtonText";
 import { Tag } from "../../components/Tag";
 
-export const Note = () => {
+export const Details = () => {
   return (
     <Container>
       <Header />
@@ -28,9 +28,9 @@ export const Note = () => {
         <small>
           Não nos resposabilizamos por comportamentos abusivos ou tag más
           intencionadas ou mal interpretadas. Porem para preservação da ordem.
-          qualquer tag que possa ser ofensivo de alguma, será analisada com as
-          devidas formas perante nosso sistema de protação ao úsuario e cliente
-          do MoviesRevies.inc
+          qualquer tag que possa ser ofensivo de alguma forma, será analisada
+          com as devidas formas perante nosso sistema de protação ao úsuario e
+          cliente do MoviesRevies.inc
         </small>
       </Content>
 
@@ -40,7 +40,7 @@ export const Note = () => {
         </a>
         <a href="https://youtube.com.br">https://www.youtube.com</a>
       </Section>
-      <Section classname="sectionTag" title="Links úteis">
+      <Section classname="sectionTag" title="Marcadores">
         <div>
           <Tag title="Sobre a empresa" />
           <Tag title="Movies Reviews" />

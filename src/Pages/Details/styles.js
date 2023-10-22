@@ -40,7 +40,7 @@ export const Content = styled.div`
   max-width: 40rem;
 
   > h1 {
-    margin-bottom: 1.8rem;
+    margin-bottom: 2rem;
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
