@@ -12,6 +12,8 @@ export const Container = styled.div`
     border-bottom: 2px;
     border-bottom-style: solid;
     border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_300};
+
+    background-color: ${({ theme }) => theme.COLORS.BG100};
     > svg {
       font-size: 3rem;
       color: ${({ theme }) => theme.COLORS.GRAY_300};
@@ -25,11 +27,11 @@ export const Avatar = styled.div`
   flex-direction: column;
   align-items: center;
 
-  margin-bottom: 4rem;
+  margin-bottom: 6rem;
 
-  margin-top: -9rem;
+  margin-top: -8rem;
   > img {
-    width: 12rem;
+    width: 10rem;
     border-radius: 50%;
   }
   > label {
@@ -60,7 +62,7 @@ export const Form = styled.div`
   margin: 3rem auto 0;
 
   > section:nth-child(3) {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
   }
 
   > button {
@@ -77,6 +79,7 @@ export const Form = styled.div`
   }
   > section {
     width: 100%;
+
     > input {
     }
   }
