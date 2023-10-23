@@ -5,14 +5,22 @@ export const Container = styled.div`
   flex-direction: column;
 
   > main {
-    /* max-width: 40rem; */
+    width: 40rem;
     align-self: center;
-    border: red solid 1px;
 
     > header {
-      border: red solid 1px;
       display: flex;
       justify-content: space-between;
+      padding: 1.7rem 0 1.7rem 0;
+      /* border: red solid 1px; */
+
+      > h1 {
+        color: white;
+      }
+      > a {
+        font-size: 2rem;
+        color: ${({ theme }) => theme.COLORS.GRAY_200};
+      }
     }
   }
 `;
@@ -20,14 +28,17 @@ export const Container = styled.div`
 export const Form = styled.form`
   align-self: center;
 
-  > textarea {
-    width: 100%;
-  }
-
   > section {
     width: 100%;
     margin-left: 0;
 
-    border: red solid 1px;
+    > section {
+      width: 100%;
+    }
+  }
+
+  > button {
+    width: 100%;
+    margin-top: 1rem;
   }
 `;

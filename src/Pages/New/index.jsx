@@ -2,7 +2,9 @@ import { Container, Form } from "./styles";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { Section } from "../../components/Section";
-import { Tag } from "../../components/Tag";
+import { Button } from "../../components/Button";
+import { Textarea } from "../../components/Textarea";
+import { NoteItem } from "../../components/NoteItem";
 
 export const New = () => {
   return (
@@ -17,17 +19,19 @@ export const New = () => {
 
         <Form>
           <Input placeholder="Título" />
-          <textarea />
+          <Textarea placeholder="Descrava as informações" />
 
           <Section title="Links úteis">
-            <Input />
-            <Input />
+            <NoteItem value="https://google.com.br" />
+            <NoteItem isNew placeholder="Novo Link" />
           </Section>
 
           <Section title="Marcadores">
-            <Tag title="Movies" />
-            <Tag title="Actors" />
+            <NoteItem value="React" />
+            <NoteItem isNew placeholder="Nova Tag" />
           </Section>
+
+          <Button title="Salvar" />
         </Form>
       </main>
     </Container>

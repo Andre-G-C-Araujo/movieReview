@@ -8,7 +8,7 @@ export const Container = styled.section`
   align-items: center;
 
   border-radius: 1rem;
-  background-color: ${({ theme }) => theme.COLORS.GRAY_50};
+  background-color: ${({ theme }) => theme.COLORS.GRAY_200};
   > svg {
     margin-left: 1.5rem;
     margin-right: -1.5rem;
@@ -21,7 +21,12 @@ export const Container = styled.section`
     width: 100%;
     background: transparent;
 
+    color: ${({ theme }) => theme.COLORS.WHITE};
     width: 20rem;
     border: 0;
+
+    &::placeholder {
+      color: ${({ theme }) => theme.COLORS.WHITE};
+    }
   }
 `;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.span`
   height: 2.2rem;
+  width: fit-content;
   padding: 0.5rem 1rem;
   margin: 0rem 1rem 1rem 0;
 
