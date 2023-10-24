@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   > button {
     display: flex;
-    margin: 3rem 0 3rem 75rem;
+    margin: 2rem 0 3rem 75rem;
     color: ${({ theme }) => theme.COLORS.TEXT_COLOR};
   }
 
@@ -16,7 +16,7 @@ export const Container = styled.div`
 
     > a {
       width: fit-content;
-      margin: 2.5rem 0 -1.5rem 0;
+      margin: 1rem 0 1rem 0;
 
       font-size: 1.7rem;
       color: white;

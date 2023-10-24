@@ -6,10 +6,10 @@ export const Container = styled.button`
   margin: 2rem 0 0 0;
 
   border-radius: 0.5rem;
-  border: none;
+  border: ${({ theme }) => `${theme.COLORS.BG100} solid 2px`};
 
   padding: 1.3rem;
-  background-color: ${({ theme }) => theme.COLORS.BG100};
+  background-color: ${({ theme }) => theme.COLORS.BG200};
 
   > h1 {
     flex: 1;

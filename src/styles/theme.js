@@ -9,6 +9,7 @@ export default {
 
     WHITE: "white",
     BLACK: "black",
+    RED: "red",
 
     GRAY_50: "#B0A6A0",
     GRAY_100: "#91908D",

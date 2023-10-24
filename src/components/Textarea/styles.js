@@ -5,10 +5,12 @@ export const Container = styled.textarea`
 
   height: 9rem;
 
-  background-color: ${({ theme }) => theme.COLORS.GRAY_200};
+  background-color: ${({ theme, isOnNote }) =>
+    isOnNote ? theme.COLORS.BG200 : theme.COLORS.GRAY_200};
   color: ${({ theme }) => theme.COLORS.WHITE};
 
-  border: none;
+  border: ${({ theme, isOnNote }) =>
+    isOnNote ? `2px solid ${theme.COLORS.BG100}` : "none"};
   resize: none;
 
   margin-top: 0.5rem;
@@ -17,6 +19,6 @@ export const Container = styled.textarea`
   padding: 1rem 2rem;
 
   &::placeholder {
-    color: ${({ theme }) => theme.COLORS.WHITE};
+    color: ${({ theme }) => theme.COLORS.GRAY_200};
   }
 `;

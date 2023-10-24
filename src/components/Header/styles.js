@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.header`
@@ -9,7 +10,7 @@ export const Container = styled.header`
   border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_200};
   border-bottom-style: solid;
 `;
-export const Profile = styled.a`
+export const Profile = styled(Link)`
   display: flex;
 
   padding: 1rem;
@@ -18,8 +19,8 @@ export const Profile = styled.a`
   > img {
     width: 5rem;
     height: 5rem;
-
     border-radius: 50%;
+    border: ${({ theme }) => `${theme.COLORS.BG100} solid 2px`};
   }
   > div {
     display: flex;
@@ -40,9 +41,10 @@ export const Profile = styled.a`
 export const Logout = styled.button`
   background: none;
   border: none;
-  padding: 2rem 2rem 0 0;
+  padding: 0rem 2rem 0 0;
+  margin-top: 2rem;
 
-  color: ${({ theme }) => theme.COLORS.GRAY_300};
+  color: ${({ theme }) => theme.COLORS.BG100};
   font-size: 2.5rem;
 
   width: 7rem;

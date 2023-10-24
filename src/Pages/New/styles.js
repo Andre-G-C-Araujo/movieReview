@@ -4,6 +4,12 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
+  > header {
+    > button {
+      margin: auto 0;
+    }
+  }
+
   > main {
     width: 40rem;
     align-self: center;
@@ -31,14 +37,17 @@ export const Form = styled.form`
   > section {
     width: 100%;
     margin-left: 0;
-
-    > section {
-      width: 100%;
-    }
+    margin-bottom: 0.5rem;
   }
 
   > button {
+    margin: 0;
     width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    padding-bottom: 1rem;
     margin-top: 1rem;
+
+    box-shadow: ${({ theme }) => `${theme.COLORS.BG200}  0.2rem 0.2rem 1.5rem`};
   }
 `;

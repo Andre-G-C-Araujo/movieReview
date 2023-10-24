@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -12,6 +13,12 @@ export const Container = styled.div`
     "menu search"
     "menu content"
     "newnote content";
+
+  > header {
+    > button {
+      margin-top: 0rem;
+    }
+  }
 `;
 
 export const Brand = styled.div`
@@ -42,14 +49,14 @@ export const Menu = styled.ul`
 export const Search = styled.div`
   grid-area: search;
 
-  padding: 2.4rem 1rem;
+  padding: 2rem 1rem;
   background: ${({ theme }) => theme.COLORS.BG300};
 
   > section {
-    width: 95%;
-    background-color: ${({ theme }) => theme.COLORS.BG100};
+    background-color: ${({ theme }) => theme.COLORS.BG200};
 
     margin-left: 3rem;
+    margin-right: 3rem;
     > input {
       color: ${({ theme }) => theme.COLORS.WHITE};
     }
@@ -60,7 +67,7 @@ export const Content = styled.div`
 
   background: ${({ theme }) => theme.COLORS.BG300};
 `;
-export const Newnote = styled.a`
+export const Newnote = styled(Link)`
   grid-area: newnote;
   display: flex;
 

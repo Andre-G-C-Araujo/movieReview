@@ -2,13 +2,15 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   display: flex;
-  width: 55%;
+  /* width: 55%; */
 
-  margin: 0.5rem auto;
+  margin: 0.6rem auto;
   align-items: center;
 
   border-radius: 1rem;
-  background-color: ${({ theme }) => theme.COLORS.GRAY_200};
+  background-color: ${({ theme }) => theme.COLORS.BG200};
+  border: ${({ theme }) => `2px solid ${theme.COLORS.BG100}`};
+
   > svg {
     margin-left: 1.5rem;
     margin-right: -1.5rem;
@@ -26,7 +28,7 @@ export const Container = styled.section`
     border: 0;
 
     &::placeholder {
-      color: ${({ theme }) => theme.COLORS.WHITE};
+      color: ${({ theme }) => theme.COLORS.GRAY_200};
     }
   }
 `;

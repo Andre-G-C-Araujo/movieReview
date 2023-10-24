@@ -67,7 +67,7 @@ export const Home = () => {
           />
         </Section>
       </Content>
-      <Newnote>
+      <Newnote to="/New">
         <FiPlus size={30} className="plusButton" />
         Criar nota
       </Newnote>

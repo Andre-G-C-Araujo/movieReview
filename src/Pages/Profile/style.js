@@ -13,11 +13,14 @@ export const Container = styled.div`
     border-bottom-style: solid;
     border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_300};
 
-    background-color: ${({ theme }) => theme.COLORS.BG100};
-    > svg {
-      font-size: 3rem;
-      color: ${({ theme }) => theme.COLORS.GRAY_300};
-      margin-left: 3rem;
+    background-color: ${({ theme }) => theme.COLORS.BG300};
+
+    > a {
+      > svg {
+        font-size: 3rem;
+        color: ${({ theme }) => theme.COLORS.GRAY_300};
+        margin-left: 3rem;
+      }
     }
   }
 `;
@@ -27,12 +30,13 @@ export const Avatar = styled.div`
   flex-direction: column;
   align-items: center;
 
-  margin-bottom: 6rem;
+  margin-bottom: 2.5rem;
 
-  margin-top: -8rem;
+  margin-top: -9.5rem;
   > img {
-    width: 10rem;
+    width: 13rem;
     border-radius: 50%;
+    border: ${({ theme }) => `2px solid ${theme.COLORS.BG100}`};
   }
   > label {
     border: ${({ theme }) => theme.COLORS.BG100} dashed 4px;
@@ -46,7 +50,7 @@ export const Avatar = styled.div`
     }
 
     > .cameraFi {
-      font-size: 2.2rem;
+      font-size: 2rem;
       color: ${({ theme }) => theme.COLORS.BG100};
     }
     > input {

@@ -6,7 +6,8 @@ export const Container = styled.button`
   padding: 1.1rem 0;
   margin: 6rem auto;
   border-radius: 0.5rem;
+  border: purple solid 2px;
 
   color: ${({ theme }) => theme.COLORS.WHITE};
-  background-color: ${({ theme }) => theme.COLORS.BG300};
+  background-color: ${({ theme }) => theme.COLORS.BG200};
 `;

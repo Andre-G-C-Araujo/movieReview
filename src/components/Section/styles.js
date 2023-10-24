@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
   margin: 0 4rem;
 
-  padding: 2rem 0rem 0.6rem 0rem;
+  padding: 1rem 0rem 0rem 0rem;
 
   color: ${({ theme }) => theme.COLORS.GRAY_100};
   > h2 {
