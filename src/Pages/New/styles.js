@@ -3,10 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-
   > header {
-    > button {
-      margin: auto 0;
+    > section {
+      width: 60%;
+      height: 2.5rem;
+      margin: auto;
     }
   }
 

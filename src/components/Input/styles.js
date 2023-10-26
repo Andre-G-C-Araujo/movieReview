@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   display: flex;
-  /* width: 55%; */
+  width: 55%;
+  height: 2.5rem;
 
-  margin: 0.6rem auto;
+  margin: auto;
   align-items: center;
 
   border-radius: 1rem;

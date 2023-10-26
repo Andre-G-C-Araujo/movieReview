@@ -9,6 +9,17 @@ export const Container = styled.header`
   border-bottom: 0.1rem;
   border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_200};
   border-bottom-style: solid;
+
+  > .leaveTextButton {
+    display: flex;
+    flex-direction: column;
+    > button {
+      margin-top: -3rem;
+      margin-bottom: 2rem;
+      margin-left: 7rem;
+      z-index: 1;
+    }
+  }
 `;
 export const Profile = styled(Link)`
   display: flex;
@@ -38,15 +49,12 @@ export const Profile = styled(Link)`
     }
   }
 `;
-export const Logout = styled.button`
-  background: none;
+export const Brand = styled.button`
+  background-color: transparent;
   border: none;
-  padding: 0rem 2rem 0 0;
-  margin-top: 2rem;
 
-  color: ${({ theme }) => theme.COLORS.BG100};
-  font-size: 2.5rem;
-
-  width: 7rem;
-  height: 100%;
+  > h1 {
+    color: ${({ theme }) => theme.COLORS.TEXT_COLOR};
+    padding: 2rem;
+  }
 `;

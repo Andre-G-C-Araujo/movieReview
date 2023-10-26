@@ -13,7 +13,7 @@ export const Form = styled.form`
   flex-direction: column;
 
   background: transparent;
-  height: 50rem;
+
   width: 40rem;
 
   border-radius: 0.5rem;
@@ -28,7 +28,7 @@ export const Form = styled.form`
   }
 
   > div {
-    margin-top: 15rem;
+    margin-top: 4rem;
 
     > h1,
     p {

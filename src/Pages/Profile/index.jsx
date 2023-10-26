@@ -1,4 +1,11 @@
-import { FiLock, FiArrowLeft, FiCamera, FiUser, FiMail } from "react-icons/fi";
+import {
+  FiLock,
+  FiArrowLeft,
+  FiCamera,
+  FiUser,
+  FiMail,
+  FiSend,
+} from "react-icons/fi";
 import { Input } from "../../components/Input";
 import { Container, Avatar, Form } from "./style";
 import { Button } from "../../components/Button";
@@ -30,7 +37,7 @@ export const Profile = () => {
         <Input placeholder="User email" icon={FiMail} />
         <Input icon={FiLock} placeholder="Senha Antiga" />
         <Input icon={FiLock} placeholder="Nova Senha" />
-        <Button title={"Salvar"} />
+        <Button title={"Enviar"} icon={FiSend} />
       </Form>
     </Container>
   );

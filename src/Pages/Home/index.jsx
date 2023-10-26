@@ -1,76 +1,39 @@
-import { Container, Brand, Newnote, Menu, Search, Content } from "./styles";
+import { Container } from "./styles";
 
 import { FiSearch, FiPlus } from "react-icons/fi";
 
-import { Section } from "../../components/Section";
-import { ButtonText } from "../../components/ButtonText";
 import { Header } from "../../components/Header";
-import { Input } from "../../components/Input";
-import { Note } from "../../components/Note";
+import { Button } from "../../components/Button";
+import { Section } from "../../components/Section";
+import { MovieItem } from "../../components/MovieItem";
 
 export const Home = () => {
   return (
     <Container>
-      <Brand>
-        <h1>MoviesReviews</h1>
-      </Brand>
       <Header />
-      <Menu>
-        <li>
-          <ButtonText title="O todo poderoso" />
-        </li>
-        <li>
-          <ButtonText title="Mortal Kombat" isActive />
-        </li>
-        <li>
-          <ButtonText title="Batman" />
-        </li>
-        <li>
-          <ButtonText title="The Flash" />
-        </li>
-      </Menu>
-      <Search>
-        <Input placeholder="Pesquisar por filme" icon={FiSearch} />
-      </Search>
-      <Content>
-        <Section title="Minhas notas">
-          <Note
-            data={{
-              title: "Mortal Kombat",
-              tags: [
-                { id: "1", name: "Mortal Kombat" },
-                { id: "2", name: "Scorpion" },
-                { id: "3", name: "Sub-Zero" },
-                { id: "4", name: "Shao Kanh" },
-                { id: "5", name: "Lyu Kang" },
-              ],
-            }}
-          />
-          <Note
-            data={{
-              title: "O todo poderoso",
-              tags: [
-                { id: "1", name: "Jim carrey" },
-                { id: "2", name: "Morgan Freeman" },
-              ],
-            }}
-          />
-          <Note
-            data={{
-              title: "Batman",
-              tags: [
-                { id: "1", name: "Bruce aWayne" },
-                { id: "2", name: "Ben affler" },
-                { id: "3", name: "Cristian Baillet" },
-              ],
-            }}
-          />
+
+      <main>
+        <header>
+          <h2>Meus Filmes</h2>
+
+          <Button title="Adicionar filme" icon={FiPlus} link="/new" />
+        </header>
+
+        <Section>
+          <MovieItem title="Interception" />
+          <MovieItem title="Catch me if you can" />
+          <MovieItem title="The all powerfull" />
+          <MovieItem title="Pirates of Cariben" />
+          <MovieItem title="Interception 2" />
+          <MovieItem title="Catch me if you can once again" />
+          <MovieItem title="The all powerfull, and the mightness" />
+          <MovieItem title="Pirates of Cariben 2 chest man heart" />
+          <MovieItem title="ceptionInter" />
+          <MovieItem title="Catch me if you can, but you never ll" />
+          <MovieItem title="The all lesspowerfull" />
+          <MovieItem title="Pirates of Cariben 3 the black pearl" />
         </Section>
-      </Content>
-      <Newnote to="/New">
-        <FiPlus size={30} className="plusButton" />
-        Criar nota
-      </Newnote>
+      </main>
     </Container>
   );
 };

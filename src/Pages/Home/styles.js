@@ -1,84 +1,56 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
-  height: 100vh;
-
-  display: grid;
-  grid-template-columns: 18rem auto;
-  grid-template-rows: 7rem 6rem auto 5rem;
-  grid-template-areas:
-    "brand header"
-    "menu search"
-    "menu content"
-    "newnote content";
-
-  > header {
-    > button {
-      margin-top: 0rem;
-    }
-  }
-`;
-
-export const Brand = styled.div`
-  grid-area: brand;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: ${({ theme }) => theme.COLORS.BG100};
-  border-bottom: 0.1rem;
-  border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_200};
-  border-bottom-style: solid;
-  > h1 {
-    color: ${({ theme }) => theme.COLORS.TEXT_COLOR};
-  }
-`;
-
-export const Menu = styled.ul`
-  grid-area: menu;
-  background: ${({ theme }) => theme.COLORS.BG100};
-
-  text-align: center;
-  padding-top: 8rem;
-
-  > li {
-    margin-bottom: 1rem;
-  }
-`;
-export const Search = styled.div`
-  grid-area: search;
-
-  padding: 2rem 1rem;
-  background: ${({ theme }) => theme.COLORS.BG300};
-
-  > section {
-    background-color: ${({ theme }) => theme.COLORS.BG200};
-
-    margin-left: 3rem;
-    margin-right: 3rem;
-    > input {
-      color: ${({ theme }) => theme.COLORS.WHITE};
-    }
-  }
-`;
-export const Content = styled.div`
   grid-area: content;
 
-  background: ${({ theme }) => theme.COLORS.BG300};
-`;
-export const Newnote = styled(Link)`
-  grid-area: newnote;
-  display: flex;
+  max-height: 100vh;
 
-  font-size: 2rem;
-  justify-content: center;
-  align-items: center;
+  ::-webkit-scrollbar {
+    border-radius: 2rem;
+    border: ${({ theme }) => `${theme.COLORS.BG100} solid 2px`};
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({ theme }) => theme.COLORS.BG100};
+    border-radius: 2rem;
+  }
 
-  background: ${({ theme }) => theme.COLORS.BG200};
-  color: ${({ theme }) => theme.COLORS.BG100};
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: ${({ theme }) => theme.COLORS.BG200};
+  }
 
-  > .plusButton {
-    margin-right: 0.7rem;
+  > header {
+    > section {
+      width: 60%;
+      height: 2.5rem;
+      margin: auto;
+    }
+  }
+
+  > main {
+    margin: auto;
+    max-width: 50rem;
+
+    > section {
+      max-height: 29rem;
+      overflow-y: scroll;
+      padding: 0 1rem;
+    }
+    > header {
+      display: flex;
+      justify-content: space-between;
+      align-self: center;
+
+      height: 8rem;
+      align-items: center;
+      > h2 {
+        font-size: 1.8rem;
+        color: ${({ theme }) => theme.COLORS.WHITE};
+      }
+      > button {
+        margin: 0;
+
+        width: fit-content;
+      }
+    }
   }
 `;

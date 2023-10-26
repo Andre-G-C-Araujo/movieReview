@@ -70,6 +70,7 @@ export const Form = styled.div`
   }
 
   > button {
+    height: 4rem;
     width: 100%;
     margin-top: 1rem;
 
@@ -77,15 +78,18 @@ export const Form = styled.div`
     align-items: center;
     justify-content: center;
 
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     border: black solid 2px;
     box-shadow: 0.2rem 0.2rem black;
+
+    > svg {
+      margin-left: -1.4rem;
+      margin-top: -0.4rem;
+    }
   }
   > section {
     width: 100%;
-
-    > input {
-    }
+    margin-top: 0.3rem;
   }
 `;
 

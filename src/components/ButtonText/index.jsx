@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import { Container } from "./styles";
 
-export const ButtonText = ({ title, isActive = false, ...rest }) => {
+export const ButtonText = ({ title, isActive = false, link, ...rest }) => {
   return (
     <Container type="button" $isactive={isActive} {...rest}>
-      {title}
+      <Link to={link}>{title}</Link>
     </Container>
   );
 };

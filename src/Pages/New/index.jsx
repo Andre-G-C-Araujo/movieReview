@@ -8,6 +8,7 @@ import { Section } from "../../components/Section";
 import { Button } from "../../components/Button";
 import { Textarea } from "../../components/Textarea";
 import { NoteItem } from "../../components/NoteItem";
+import { FiSend } from "react-icons/fi";
 
 export const New = () => {
   return (
@@ -34,7 +35,7 @@ export const New = () => {
             <NoteItem isNew placeholder="Nova Tag" />
           </Section>
 
-          <Button title="Salvar" />
+          <Button title="Enviar" icon={FiSend} link={"/"} />
         </Form>
       </main>
     </Container>

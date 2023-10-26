@@ -3,6 +3,7 @@ export default {
     BG100: "purple",
     BG200: "#3c005a",
     BG300: "#600080",
+    BG400: "#FF859B",
 
     TEXT_COLOR: "#E66C2C",
     TEXT_BUTTON: "red",
@@ -10,6 +11,7 @@ export default {
     WHITE: "white",
     BLACK: "black",
     RED: "red",
+    CLARA: "wheat",
 
     GRAY_50: "#B0A6A0",
     GRAY_100: "#91908D",

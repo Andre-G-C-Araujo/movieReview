@@ -1,23 +1,28 @@
-import { Container, Logout, Profile } from "./styles";
+import { Input } from "../Input";
+import { ButtonText } from "../ButtonText";
+import { Container, Brand, Profile } from "./styles";
 import { RiShutDownLine } from "react-icons/ri";
 
 export const Header = () => {
   return (
     <Container>
-      <Profile to="/profile">
-        <img
-          src="https://github.com/Andre-G-C-Araujo.png"
-          alt="Foto de perfil"
-        />
-        <div>
-          <span>Bem Vindo! Wellcome!</span>
-          <strong>Andre Caue</strong>
-        </div>
-      </Profile>
+      <Brand>
+        <h1>Movies Review</h1>
+      </Brand>
 
-      <Logout>
-        <RiShutDownLine />
-      </Logout>
+      <Input placeholder="Pesquise por um título" />
+      <div className="leaveTextButton">
+        <Profile to="/profile">
+          <div>
+            <strong>Andre Caue</strong>
+          </div>
+          <img
+            src="https://github.com/Andre-G-C-Araujo.png"
+            alt="Foto de perfil"
+          />
+        </Profile>
+        <ButtonText title="Sair" link="/" />
+      </div>
     </Container>
   );
 };
