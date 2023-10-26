@@ -19,6 +19,9 @@ export const MovieItem = ({ title, rating = 4 }) => {
           consequatur quisquam!
         </p>
         <Tag title="Drama" />
+        <Tag title="Action" />
+        <Tag title="Terror" />
+        <Tag title="Suspense" />
       </Content>
     </Container>
   );

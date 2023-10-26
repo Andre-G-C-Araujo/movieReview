@@ -16,11 +16,13 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
+  flex-wrap: wrap;
+  display: flex;
   > p {
     color: ${({ theme }) => theme.COLORS.WHITE};
   }
 
   > span {
-    margin: 0.5rem 0;
+    margin: 0.5rem 0.5rem 0 0;
   }
 `;
