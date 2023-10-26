@@ -10,6 +10,8 @@ export const Container = styled.header`
   border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_200};
   border-bottom-style: solid;
 
+  padding: 0 13rem;
+
   > .leaveTextButton {
     display: flex;
     flex-direction: column;
