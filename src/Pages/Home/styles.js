@@ -18,18 +18,8 @@ export const Container = styled.div`
     background-color: ${({ theme }) => theme.COLORS.BG200};
   }
 
-  > header {
-    > section {
-      width: 60%;
-      height: 2.5rem;
-      margin: auto;
-    }
-  }
-
   > main {
-    margin: auto;
-    max-width: 50rem;
-
+    padding: 0 15rem 0rem 15rem;
     > section {
       max-height: 29rem;
       overflow-y: scroll;

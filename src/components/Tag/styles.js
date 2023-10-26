@@ -14,4 +14,13 @@ export const Container = styled.span`
   font-size: 1.1rem;
   background-color: ${({ theme }) => theme.COLORS.BG100};
   color: ${({ theme }) => theme.COLORS.WHITE};
+
+  > svg {
+    color: ${({ theme, isnew }) =>
+      isnew ? theme.COLORS.RED : theme.COLORS.WHITE};
+    margin-left: 0.5rem;
+    margin-top: 0.2rem;
+    height: 0.8rem;
+    /* Fazer condiçoes para que tire o bg da tag. border dash etc. */
+  }
 `;

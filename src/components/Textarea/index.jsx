@@ -1,8 +1,8 @@
 import { Container } from "./styles";
 
-export function Textarea({ value, isOnNote = false, ...rest }) {
+export function Textarea({ value, isonnote, ...rest }) {
   return (
-    <Container isOnNote {...rest}>
+    <Container isonnote={"true"} {...rest}>
       {value}
     </Container>
   );
