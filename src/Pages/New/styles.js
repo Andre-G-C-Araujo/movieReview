@@ -6,6 +6,7 @@ export const Container = styled.div`
 
   > main {
     padding: 0 15rem 0rem 15rem;
+    max-height: 53rem;
     > header {
       display: flex;
       flex-direction: column;
@@ -13,27 +14,58 @@ export const Container = styled.div`
       /* border: red solid 1px; */
 
       > a {
-        font-size: 1.5rem;
+        font-size: 1rem;
         color: ${({ theme }) => theme.COLORS.GRAY_200};
         padding: 1rem 0;
 
         > svg {
-          font-size: 1.2rem;
+          font-size: 1rem;
           margin-right: 0.5rem;
         }
       }
-      > h1 {
+      > h2 {
         color: white;
-        padding-bottom: 2rem;
+        padding-bottom: 0.7rem;
       }
     }
     > section {
       > div {
         display: flex;
-        background: red;
+        background: ${({ theme }) => theme.COLORS.BG200};
         padding: 0.8rem 0 0.1rem 0.5rem;
+        border-radius: 0.5rem;
+        border: ${({ theme }) => `${theme.COLORS.BG100} solid 2px`};
+
         > span {
           padding: 0.5rem;
+          background-color: ${({ theme, isnew }) => {
+            isnew ? "white" : theme.COLORS.BG100;
+          }};
+        }
+      }
+    }
+    > div {
+      display: flex;
+      justify-content: space-between;
+
+      padding-top: 2rem;
+      > button {
+        width: 42%;
+        margin: 0;
+        font-size: 1.3rem;
+      }
+
+      > button:nth-child(1) {
+        background-color: ${({ theme }) => theme.COLORS.BG200};
+        > a {
+          color: ${({ theme }) => theme.COLORS.BG100};
+        }
+      }
+      > button:nth-child(2) {
+        background-color: ${({ theme }) => theme.COLORS.BG100};
+        border: ${({ theme }) => `${theme.COLORS.BG200} solid 2px`};
+        > a {
+          color: ${({ theme }) => theme.COLORS.BG200};
         }
       }
     }
@@ -45,7 +77,7 @@ export const Form = styled.form`
     display: flex;
 
     justify-content: space-between;
-    padding-bottom: 2rem;
+
     > section {
       width: 45%;
       margin: 0;

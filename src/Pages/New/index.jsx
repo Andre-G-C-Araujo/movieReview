@@ -5,10 +5,10 @@ import { Container, Form } from "./styles";
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { Section } from "../../components/Section";
-import { NoteItem } from "../../components/NoteItem";
+import { Button } from "../../components/Button";
 import { Textarea } from "../../components/Textarea";
-import { Tag } from "../../components/Tag";
-import { FiArrowLeft, FiX } from "react-icons/fi";
+import { TagIcon } from "../../components/TagIcon";
+import { FiArrowLeft, FiTrash, FiSave } from "react-icons/fi";
 
 export const New = () => {
   return (
@@ -21,7 +21,7 @@ export const New = () => {
             <FiArrowLeft />
             Voltar
           </Link>
-          <h1>Criar nota</h1>
+          <h2>Novo Filme</h2>
         </header>
 
         <Form>
@@ -34,11 +34,15 @@ export const New = () => {
         </Form>
         <Section title="Marcadores">
           <div>
-            {/* Parei aqui */}
-            <Tag title="Ficção" />
-            <Tag title="Drama" isnew="true" />
+            <TagIcon title="Ficção" />
+            <TagIcon title="Drama" isnew="true" />
           </div>
         </Section>
+
+        <div className="footerButtons">
+          <Button title="Excluir" icon={FiTrash} />
+          <Button title={"Salvar"} icon={FiSave} />
+        </div>
       </main>
     </Container>
   );

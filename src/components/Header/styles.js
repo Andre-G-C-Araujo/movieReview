@@ -10,15 +10,15 @@ export const Container = styled.header`
   border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_200};
   border-bottom-style: solid;
 
-  padding: 0 13rem;
+  padding: 0 12%;
 
   > .leaveTextButton {
     display: flex;
     flex-direction: column;
     > button {
       margin-top: -3rem;
-      margin-bottom: 2rem;
-      margin-left: 7rem;
+
+      margin-left: 4rem;
       z-index: 1;
     }
   }
@@ -46,7 +46,7 @@ export const Profile = styled(Link)`
     }
 
     > strong {
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: ${({ theme }) => theme.COLORS.WHITE};
     }
   }

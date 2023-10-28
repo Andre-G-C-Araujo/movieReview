@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.textarea`
   width: 100%;
 
-  height: 15rem;
+  height: 10rem;
 
   background-color: ${({ theme, isonnote }) =>
     isonnote ? theme.COLORS.BG200 : theme.COLORS.GRAY_200};

@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.span`
   height: 2.2rem;
   width: fit-content;
-  padding: 0.5rem 1rem;
-  margin: 0rem 1rem 1rem 0;
+
+  margin: 0rem 1rem 0.7rem 0;
 
   display: flex;
 
@@ -16,14 +16,20 @@ export const Container = styled.span`
     isnew ? "transparent" : theme.COLORS.BG100};
   color: ${({ theme }) => theme.COLORS.WHITE};
   border: ${({ theme, isnew }) =>
-    isnew ? `${theme.COLORS.BG100} solid 2px` : "none"};
+    isnew ? `${theme.COLORS.BG100} dashed 2px` : "none"};
+
+  align-items: center;
 
   > svg {
     color: ${({ theme, isnew }) =>
       isnew ? theme.COLORS.RED : theme.COLORS.WHITE};
     margin-left: 0.5rem;
-    margin-top: 0.2rem;
-    height: 0.8rem;
-    /* Fazer condiçoes para que tire o bg da tag. border dash etc. */
+
+    height: 1rem;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
   }
 `;

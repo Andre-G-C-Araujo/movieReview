@@ -14,9 +14,9 @@ export const Container = styled.button`
     padding: 1.2rem;
 
     > svg {
-      margin-bottom: -0.6rem;
+      margin-bottom: -0.3rem;
       margin-right: 1rem;
-      font-size: 1.8rem;
+      font-size: 1.6rem;
     }
   }
 `;

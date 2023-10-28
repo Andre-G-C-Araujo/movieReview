@@ -32,9 +32,9 @@ export const Avatar = styled.div`
 
   margin-bottom: 2.5rem;
 
-  margin-top: -9.5rem;
+  margin-top: -8.5rem;
   > img {
-    width: 13rem;
+    width: 11rem;
     border-radius: 50%;
     border: ${({ theme }) => `2px solid ${theme.COLORS.BG100}`};
   }
@@ -70,7 +70,7 @@ export const Form = styled.div`
   }
 
   > button {
-    height: 4rem;
+    height: 3rem;
     width: 100%;
     margin-top: 1rem;
 
@@ -89,7 +89,8 @@ export const Form = styled.div`
   }
   > section {
     width: 100%;
-    margin-top: 0.3rem;
+    height: 3rem;
+    margin-top: 0.5rem;
   }
 `;
 
