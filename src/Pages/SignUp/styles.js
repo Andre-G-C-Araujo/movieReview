@@ -27,6 +27,13 @@ export const Form = styled.form`
     font-size: 1.5rem;
   }
 
+  > section {
+    width: 55%;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    height: 3rem;
+  }
+
   > div {
     margin-top: 4rem;
 

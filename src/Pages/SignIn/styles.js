@@ -20,13 +20,6 @@ export const Form = styled.form`
 
   margin: 0 auto;
 
-  > a {
-    margin-top: 3rem;
-    text-align: center;
-    color: ${({ theme }) => theme.COLORS.TEXT_COLOR};
-    font-size: 1.5rem;
-  }
-
   > div {
     margin-top: 7.5rem;
 
@@ -48,9 +41,23 @@ export const Form = styled.form`
   > h2 {
     color: ${({ theme }) => theme.COLORS.GRAY_50};
 
-    margin: 3rem auto;
+    margin: 4rem auto;
 
     font-size: 2rem;
+  }
+
+  > section {
+    width: 55%;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    height: 3rem;
+  }
+
+  > a {
+    margin-top: 3rem;
+    text-align: center;
+    color: ${({ theme }) => theme.COLORS.TEXT_COLOR};
+    font-size: 1.5rem;
   }
 `;
 

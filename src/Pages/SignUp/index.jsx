@@ -1,4 +1,12 @@
-import { FiMail, FiLock, FiUser } from "react-icons/fi";
+import {
+  FiMail,
+  FiLock,
+  FiUser,
+  FiSave,
+  FiTarget,
+  FiAirplay,
+  FiUserCheck,
+} from "react-icons/fi";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
@@ -19,7 +27,11 @@ export const SignUp = () => {
         <Input type="text" placeholder="Digite seu Email" icon={FiMail} />
         <Input type="password" placeholder="Digite sua Senha" icon={FiLock} />
 
-        <Button title="Criar conta" classname={"futuramente um link"} />
+        <Button
+          title="Criar conta"
+          classname={"futuramente um link"}
+          icon={FiUserCheck}
+        />
         <Link to="/"> Voltar para login </Link>
       </Form>
     </Container>

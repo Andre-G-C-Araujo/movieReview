@@ -6,7 +6,7 @@ import { AuthRouter } from "./auth.routes";
 export const Routes = () => {
   return (
     <BrowserRouter>
-      <AppRouter />
+      <AuthRouter />
     </BrowserRouter>
   );
 };

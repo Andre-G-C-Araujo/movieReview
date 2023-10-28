@@ -1,4 +1,4 @@
-import { FiMail, FiLock } from "react-icons/fi";
+import { FiMail, FiLock, FiKey } from "react-icons/fi";
 
 import { Input } from "../../components/Input";
 import { Button } from "../../components/Button";
@@ -17,7 +17,7 @@ export const SignIn = () => {
         <Input type="text" placeholder="Digite seu Email" icon={FiMail} />
         <Input type="password" placeholder="Digite sua Senha" icon={FiLock} />
 
-        <Button title="Entrar" classname={"futuramente um link"} />
+        <Button title="Entrar" classname={"futuramente um link"} icon={FiKey} />
         <Link to="/register"> Crie sua conta </Link>
       </Form>
       <Background />
