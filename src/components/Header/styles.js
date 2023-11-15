@@ -11,17 +11,6 @@ export const Container = styled.header`
   border-bottom-style: solid;
 
   padding: 0 12%;
-
-  > .leaveTextButton {
-    display: flex;
-    flex-direction: column;
-    > button {
-      margin-top: -3rem;
-
-      margin-left: 4rem;
-      z-index: 1;
-    }
-  }
 `;
 export const Profile = styled(Link)`
   display: flex;
@@ -38,15 +27,12 @@ export const Profile = styled(Link)`
   > div {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     margin-left: 1rem;
     padding: 0.7rem;
-    > span {
-      font-size: 1.2rem;
-      color: ${({ theme }) => theme.COLORS.GRAY_100};
-    }
 
     > strong {
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: ${({ theme }) => theme.COLORS.WHITE};
     }
   }

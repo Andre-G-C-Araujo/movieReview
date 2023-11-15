@@ -5,7 +5,19 @@ import { Button } from "../../components/Button";
 import { Container, Form, Background } from "./styles";
 import { Link } from "react-router-dom";
 
+import { useAuth } from "../../hooks/auth";
+import { useState } from "react";
+
 export const SignIn = () => {
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+
+  const { signIn } = useAuth();
+
+  function handleSignIn() {
+    signIn({ email, password });
+  }
+
   return (
     <Container>
       <Form>
@@ -14,11 +26,28 @@ export const SignIn = () => {
           <p>Aplicação para ver feedback de filmes</p>
         </div>
         <h2>Faça seu login</h2>
-        <Input type="text" placeholder="Digite seu Email" icon={FiMail} />
-        <Input type="password" placeholder="Digite sua Senha" icon={FiLock} />
+        <Input
+          type="text"
+          placeholder="Digite seu Email"
+          icon={FiMail}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <Input
+          type="password"
+          placeholder="Digite sua Senha"
+          icon={FiLock}
+          onChange={(e) => setPassword(e.target.value)}
+        />
 
-        <Button title="Entrar" classname={"futuramente um link"} icon={FiKey} />
-        <Link to="/register"> Crie sua conta </Link>
+        <div className="buttonsBottom">
+          <Button
+            title="Entrar"
+            classname={"futuramente um link"}
+            icon={FiKey}
+            onClick={handleSignIn}
+          />
+          <Link to="/register"> Crie sua conta </Link>
+        </div>
       </Form>
       <Background />
     </Container>

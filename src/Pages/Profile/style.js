@@ -35,6 +35,7 @@ export const Avatar = styled.div`
   margin-top: -8.5rem;
   > img {
     width: 11rem;
+    height: 11rem;
     border-radius: 50%;
     border: ${({ theme }) => `2px solid ${theme.COLORS.BG100}`};
   }

@@ -31,10 +31,11 @@ export const Container = styled.div`
     > section {
       > div {
         display: flex;
+        flex-wrap: wrap;
         background: ${({ theme }) => theme.COLORS.BG200};
-        padding: 0.8rem 0 0.1rem 0.5rem;
         border-radius: 0.5rem;
         border: ${({ theme }) => `${theme.COLORS.BG100} solid 2px`};
+        width: 100%;
 
         > span {
           padding: 0.5rem;

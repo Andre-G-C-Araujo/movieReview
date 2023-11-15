@@ -21,7 +21,7 @@ export const Form = styled.form`
   margin: 0 auto;
 
   > div {
-    margin-top: 7.5rem;
+    margin-top: 4.5rem;
 
     > h1,
     p {
@@ -39,25 +39,32 @@ export const Form = styled.form`
   }
 
   > h2 {
-    color: ${({ theme }) => theme.COLORS.GRAY_50};
+    color: ${({ theme }) => theme.COLORS.TEXT_COLOR};
 
-    margin: 4rem auto;
+    margin: 2rem auto 6rem;
 
     font-size: 2rem;
   }
 
   > section {
     width: 55%;
-    margin-top: 1rem;
-    margin-bottom: 0;
     height: 3rem;
+    margin-bottom: 0;
+    margin-top: 1.5rem;
   }
 
-  > a {
-    margin-top: 3rem;
-    text-align: center;
-    color: ${({ theme }) => theme.COLORS.TEXT_COLOR};
-    font-size: 1.5rem;
+  > .buttonsBottom {
+    > a {
+      display: block;
+      text-align: center;
+      color: ${({ theme }) => theme.COLORS.TEXT_COLOR};
+      font-size: 1.5rem;
+    }
+
+    > button {
+      align-self: center;
+      margin: 1rem 13rem;
+    }
   }
 `;
 

@@ -5,10 +5,10 @@ export const Container = styled.div`
   align-items: center;
 
   border-radius: 0.7rem;
-  background-color: ${({ theme, isNew }) =>
-    isNew ? "transparent" : theme.COLORS.BG200};
-  border: ${({ theme, isNew }) =>
-    isNew
+  background-color: ${({ theme, isnew }) =>
+    isnew ? "transparent" : theme.COLORS.BG200};
+  border: ${({ theme, isnew }) =>
+    isnew
       ? `2px dashed ${theme.COLORS.BG100}`
       : `${theme.COLORS.BG100} solid 2px`};
 

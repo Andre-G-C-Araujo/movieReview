@@ -21,7 +21,6 @@ export const Form = styled.form`
   margin: 0 auto;
 
   > a {
-    margin-top: 3rem;
     text-align: center;
     color: ${({ theme }) => theme.COLORS.TEXT_COLOR};
     font-size: 1.5rem;
@@ -35,7 +34,7 @@ export const Form = styled.form`
   }
 
   > div {
-    margin-top: 4rem;
+    margin-top: 5rem;
 
     > h1,
     p {
@@ -58,6 +57,14 @@ export const Form = styled.form`
     margin: 3rem auto;
 
     font-size: 2rem;
+  }
+
+  > button {
+    margin: 7rem auto 2rem;
+  }
+
+  > span {
+    margin: 0 auto;
   }
 `;
 

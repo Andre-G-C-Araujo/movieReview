@@ -1,14 +1,14 @@
 import { StarRating } from "../StartRating";
 import { Tag } from "../Tag";
 import { Container, Content } from "./styles";
-import { FaStar } from "react-icons/fa";
 
-export const MovieItem = ({ title, rating = 4 }) => {
+export const MovieItem = ({ title, rating = "4", description, tags }) => {
+  console.log(title, rating, description, tags);
   return (
     <Container>
       <header>
         <h1>{title}</h1>
-        <StarRating rating={rating} />
+        <StarRating rating={Number(rating)} />
       </header>
 
       <Content>

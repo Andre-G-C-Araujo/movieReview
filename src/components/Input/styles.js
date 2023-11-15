@@ -21,11 +21,10 @@ export const Container = styled.section`
 
   > input {
     padding: 1rem 2.5rem;
-    width: 100%;
     background: transparent;
-
+    width: 100%;
     color: ${({ theme }) => theme.COLORS.WHITE};
-    width: 20rem;
+
     border: 0;
 
     &::placeholder {

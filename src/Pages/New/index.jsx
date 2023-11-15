@@ -1,16 +1,63 @@
+import { useState } from "react";
+
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+import { api } from "../../services/api";
 
 import { Container, Form } from "./styles";
-
 import { Header } from "../../components/Header";
 import { Input } from "../../components/Input";
 import { Section } from "../../components/Section";
-import { Button } from "../../components/Button";
 import { Textarea } from "../../components/Textarea";
-import { TagIcon } from "../../components/TagIcon";
+import { Button } from "../../components/Button";
+import { NoteItem } from "../../components/NoteItem";
+
 import { FiArrowLeft, FiTrash, FiSave } from "react-icons/fi";
 
 export const New = () => {
+  const [title, setTitle] = useState();
+  const [rating, setRating] = useState("0");
+  const [textAreaContent, setTextAreaContent] = useState("");
+
+  const navigate = useNavigate();
+
+  const [tags, setTags] = useState([]);
+  const [newTag, setNewTag] = useState("");
+
+  function handleAddLink() {
+    setTags((prevState) => [...prevState, newTag]);
+    setNewTag("");
+  }
+
+  //passando como parametro quem vai ser deletado
+  function handleRemoveLink(deleted) {
+    //retorna uma nova lista sem o link que foi deletado.
+    //link !== deleted vai retornar false no que foi deletado(clicado) e retorna o resto
+    setTags((prevState) => prevState.filter((link) => link !== deleted));
+  }
+
+  async function handleCreateNote() {
+    if (!title) {
+      return alert("Precisa preencher o título!");
+    }
+    if (!rating) {
+      return alert("Preencha o rating (feedback)");
+    }
+    if (!textAreaContent) {
+      return alert("Precisa preencher o título!");
+    }
+
+    await api.post("/movies_notes", {
+      title,
+      rating,
+      description: textAreaContent,
+      movies_tags: [...tags],
+    });
+    alert("Nota criada com sucesso!");
+    navigate("/");
+  }
+
   return (
     <Container>
       <Header />
@@ -26,22 +73,56 @@ export const New = () => {
 
         <Form>
           <div>
-            <Input placeholder="Título" bgNote="bgNote" />
-            <Input placeholder="Sua nota de (0 a 5)" bgNote="bgNote" />
+            <Input
+              placeholder="Título"
+              bgNote="bgNote"
+              onChange={(e) => {
+                setTitle(e.target.value);
+              }}
+            />
+            <Input
+              placeholder="Sua nota de (0 a 5)"
+              bgNote="bgNote"
+              onChange={(e) => {
+                setRating(e.target.value);
+              }}
+            />
           </div>
 
-          <Textarea placeholder="Observações" isonnote={false} />
+          <Textarea
+            placeholder="Observações"
+            isonnote={false}
+            onChange={(e) => {
+              setTextAreaContent(e.target.value);
+            }}
+          />
         </Form>
         <Section title="Marcadores">
           <div>
-            <TagIcon title="Ficção" />
-            <TagIcon title="Drama" isnew="true" />
+            {tags.map((link, index) => (
+              <NoteItem
+                key={String(index)}
+                value={link}
+                onClick={() => handleRemoveLink(link)}
+              />
+            ))}
+            <NoteItem
+              placeholder="Nova Tag"
+              isnew="true"
+              value={newTag}
+              onChange={(e) => setNewTag(e.target.value)}
+              onClick={handleAddLink}
+            />
           </div>
         </Section>
 
         <div className="footerButtons">
-          <Button title="Excluir" icon={FiTrash} />
-          <Button title={"Salvar"} icon={FiSave} />
+          <Button
+            title="Excluir"
+            icon={FiTrash}
+            onClick={() => window.location.reload()}
+          />
+          <Button title={"Salvar"} icon={FiSave} onClick={handleCreateNote} />
         </div>
       </main>
     </Container>
