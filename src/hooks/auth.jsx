@@ -6,7 +6,7 @@ export const AuthContext = createContext({});
 
 function AuthProvider({ children }) {
   const [data, setData] = useState({});
-  console.log(data);
+  // console.log(data);
 
   async function signIn({ email, password }) {
     try {
@@ -60,13 +60,6 @@ function AuthProvider({ children }) {
     setData({});
   }
 
-  async function getInfoNotes() {
-    const response = await api.get("/movies_notes/1");
-    const { title, rating, description } = response.data;
-    // parei aqui, preciso pegar todas as notas referente ao user_id com o note_id
-    console.log(title, rating, description);
-  }
-
   useEffect(() => {
     const token = localStorage.getItem("@moviesreview:token");
     const user = localStorage.getItem("@moviesreview:user");
@@ -88,7 +81,6 @@ function AuthProvider({ children }) {
         user: data.user,
         signOut,
         updateUserProfile,
-        getInfoNotes,
       }}
     >
       {children}

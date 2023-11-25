@@ -38,21 +38,37 @@ export const New = () => {
   }
 
   async function handleCreateNote() {
+    const checkIsNumber = Number(rating);
+
+    console.log(checkIsNumber);
+
     if (!title) {
       return alert("Precisa preencher o título!");
     }
-    if (!rating) {
-      return alert("Preencha o rating (feedback)");
+
+    if (isNaN(checkIsNumber)) {
+      return alert("Campo rating precisa ser um digito.");
+    }
+
+    if (checkIsNumber < 0 || checkIsNumber > 5) {
+      return alert("Rating precisa ser um numero de 1 a 5");
     }
     if (!textAreaContent) {
-      return alert("Precisa preencher o título!");
+      return alert("Precisa preencher uma descrição!");
+    }
+
+    if (tags.length === 0 && !newTag) {
+      return alert("Precisa preencher pelo menos 1 (uma) tag!");
+    }
+    if (newTag) {
+      return alert("Campo preenchido mas não foi adicionado!");
     }
 
     await api.post("/movies_notes", {
       title,
       rating,
       description: textAreaContent,
-      movies_tags: [...tags],
+      movies_tags: tags,
     });
     alert("Nota criada com sucesso!");
     navigate("/");

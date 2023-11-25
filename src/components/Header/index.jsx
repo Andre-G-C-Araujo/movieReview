@@ -8,7 +8,7 @@ import placeholderImg from "../../assets/avatar_placeholder.svg";
 import { useAuth } from "../../hooks/auth";
 import { api } from "../../services/api";
 
-export const Header = () => {
+export const Header = ({ setSearch }) => {
   const { signOut, user } = useAuth();
 
   const avatarUrl = user.avatar
@@ -21,7 +21,10 @@ export const Header = () => {
         <h1>Movies Review</h1>
       </Brand>
 
-      <Input placeholder="Pesquise por um título" />
+      <Input
+        placeholder="Pesquise por um título"
+        onChange={(e) => setSearch(e.target.value)}
+      />
 
       <Profile to="/profile">
         <div>
