@@ -15,38 +15,33 @@ export const Home = () => {
   const [tags, setTags] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
 
+  const notesMapForSearch = notes.map((note) => note.title);
+  const notesFilteredByLetter = notesMapForSearch.filter((letter) =>
+    letter.includes(search)
+  );
+
   function handleNameTag(tagName) {
-    console.log(tags);
-    console.log(search);
+    console.log(notesFilteredByLetter);
+
+    setSelectedTags([]);
 
     if (tagName) {
-      const searchTag = tags.map((tag) => tag);
-      const filteredTag = searchTag.filter((tag) => tag !== tagName);
+      const verifyTag = tags.filter((tag) => tag.name.includes(tagName)); // retorn a tag de acordo com o filtro {estrutura intera}
+      const searchedTag = verifyTag.map((tag) => tag.name); // retornando o nome da tag de acordo com o filtro
 
-      console.log(filteredTag);
-      setSelectedTags(filteredTag);
+      setSelectedTags(searchedTag);
     } else {
-      setSelectedTags((prev) => [...prev, tagName]);
+      setSelectedTags((prevState) => [...prevState, tagName]);
     }
-
-    //Precisa pega valor do input
-    //precisa verificar se o valor do input bate com o array.
-    // retornar item que bate
-
-    setSelectedTags(tagName);
   }
+  useEffect(() => {
+    handleNameTag(search);
+  }, [search]);
 
   useEffect(() => {
     async function fetchTags() {
       const response = await api.get("/movies_tags");
-
-      // const filterTag = tags.data.filter((item) => {
-      //   item.name === search ? setTags(item) : console.log("deu errado");
-      // });
-      const mapedTags = response.data.map((item) => item.name);
-      // const filterdTags = mapedTags.map((item) => item.split(""));
-
-      setTags(mapedTags);
+      setTags(response.data);
     }
 
     fetchTags();
@@ -54,16 +49,22 @@ export const Home = () => {
 
   useEffect(() => {
     async function fetchNotes() {
-      const response = await api.get(
-        `/movies_notes?title=${search}&movies_tags=${selectedTags}`
-      );
+      if (notesFilteredByLetter.length === 0) {
+        const response = await api.get(
+          `/movies_notes?title&movies_tags=${selectedTags}`
+        );
+        setNotes(response.data);
+      } else {
+        const response = await api.get(
+          `/movies_notes?title=${search}&movies_tags`
+        );
 
-      setNotes(response.data);
-      handleNameTag(search);
+        setNotes(response.data);
+      }
     }
 
     fetchNotes();
-  }, [search, selectedTags]);
+  }, [selectedTags, search]);
   return (
     <Container>
       <Header setSearch={setSearch} />

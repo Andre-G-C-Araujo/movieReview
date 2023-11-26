@@ -22,7 +22,7 @@ export const Header = ({ setSearch }) => {
       </Brand>
 
       <Input
-        placeholder="Pesquise por um título"
+        placeholder="Pesquise por um título ou tag"
         onChange={(e) => setSearch(e.target.value)}
       />
 
