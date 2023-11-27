@@ -90,9 +90,7 @@ export const TextContent = styled.p`
   overflow-y: auto;
   max-height: 25rem;
 
-  > p {
-    color: white;
-    font-size: 1.2rem;
-    margin-bottom: 3rem;
-  }
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
 `;

@@ -7,9 +7,17 @@ import placeholderImg from "../../assets/avatar_placeholder.svg";
 
 import { useAuth } from "../../hooks/auth";
 import { api } from "../../services/api";
+import { useNavigate } from "react-router-dom";
 
 export const Header = ({ setSearch }) => {
   const { signOut, user } = useAuth();
+
+  const navigate = useNavigate();
+
+  function handleSignOut() {
+    navigate("/");
+    signOut();
+  }
 
   const avatarUrl = user.avatar
     ? `${api.defaults.baseURL}/files/${user.avatar}`
@@ -17,7 +25,7 @@ export const Header = ({ setSearch }) => {
 
   return (
     <Container>
-      <Brand>
+      <Brand to={"/"}>
         <h1>Movies Review</h1>
       </Brand>
 
@@ -34,8 +42,13 @@ export const Header = ({ setSearch }) => {
       </Profile>
       <ButtonText //NAO PODE SER CHILDREN.
         title="Sair"
-        onClick={signOut}
-        style={{ position: "relative", right: "9rem", top: "1rem" }}
+        onClick={handleSignOut}
+        style={{
+          position: "relative",
+          right: "9rem",
+          top: "4rem",
+          height: "fit-content",
+        }}
       />
     </Container>
   );

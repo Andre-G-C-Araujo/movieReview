@@ -37,7 +37,7 @@ export const Profile = styled(Link)`
     }
   }
 `;
-export const Brand = styled.button`
+export const Brand = styled(Link)`
   background-color: transparent;
   border: none;
 

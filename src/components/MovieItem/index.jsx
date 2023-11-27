@@ -2,11 +2,12 @@ import { StarRating } from "../StartRating";
 import { Container, Content } from "./styles";
 import { Tag } from "../Tag";
 
-export const MovieItem = ({ title, rating, description, tags }) => {
+export const MovieItem = ({ title, rating, description, tags, ...rest }) => {
   return (
-    <Container>
+    <Container {...rest}>
       <header>
         <h1>{title}</h1>
+
         <StarRating rating={Number(rating)} />
       </header>
 

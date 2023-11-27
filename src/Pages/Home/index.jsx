@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Container } from "./styles";
 
+import { useNavigate } from "react-router-dom";
+
 import { FiPlus } from "react-icons/fi";
 
 import { Header } from "../../components/Header";
@@ -15,10 +17,16 @@ export const Home = () => {
   const [tags, setTags] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
 
+  const navigate = useNavigate();
+
   const notesMapForSearch = notes.map((note) => note.title);
   const notesFilteredByLetter = notesMapForSearch.filter((letter) =>
     letter.includes(search)
   );
+
+  function handleDetails(id) {
+    navigate(`/details/${id}`);
+  }
 
   function handleNameTag(tagName) {
     console.log(notesFilteredByLetter);
@@ -77,13 +85,14 @@ export const Home = () => {
         </header>
 
         <Section>
-          {notes.map((note, index) => (
+          {notes.map((note) => (
             <MovieItem
-              key={index}
+              key={String(note.id)}
               title={note.title}
               rating={Number(note.rating)}
               description={note.description}
               tags={note.movies_tags}
+              onClick={() => handleDetails(note.id)}
             />
           ))}
         </Section>
