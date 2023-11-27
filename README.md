@@ -29,12 +29,12 @@ suas experiências e avaliando o filmes de acordo com suas opniões.
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
   
-  <img alt="paginaDeLogin" src="./src/assets/movieSignIn.PNG" />
-  <img alt="paginaDeRegistro" title="#" src="./src/assets/movieSignup.PNG" />
-  <img alt="paginaHome" title="#" src="./src/assets/movieHome.PNG" />
-  <img alt="paginaNew" title="#" src="./src/assets/movieNew.PNG" />
-  <img alt="paginaProfile" title="#" src="./src/assets/movieprofile.PNG" />
-  <img alt="paginaDetail" title="#" src="./src/assets/movieDetail.PNG" />
+  <img alt="paginaDeLogin" src="./src/assets/moviesNotes/SignIn.PNG" />
+  <img alt="paginaDeRegistro" title="#" src="./src/assets/moviesNotes/Register.PNG" />
+  <img alt="paginaHome" title="#" src="./src/assets/moviesNotes/Home.PNG" />
+  <img alt="paginaNew" title="#" src="./src/assets/moviesNotes/New.PNG" />
+  <img alt="paginaProfile" title="#" src="./src/assets/moviesNotes/Profile.PNG" />
+  <img alt="paginaDetail" title="#" src="./src/assets/moviesNotes/Details.PNG" />
 </p>
 
 ---
