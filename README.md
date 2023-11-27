@@ -16,7 +16,6 @@
  <a href="#user-content--licença">Licença</a>
 </p>
 
-
 ## 💻 Sobre o projeto
 
 Movies Review - WebApp feito com o intuito de reduzir o tempo de procura de filmes, dando ao usúarios a possibilidade de compartilhar
